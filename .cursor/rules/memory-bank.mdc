@@ -1,0 +1,29 @@
+---
+description: "Memory Bank orchestrator - controls WHEN and WHAT to read"
+alwaysApply: true
+---
+
+# Memory Bank Protocol
+
+You have NO memory between sessions. Read context hierarchically — never all at once.
+
+## Read Order (stop when context is sufficient)
+
+1. **Always read first:** `memory-bank/03-active.md` — current focus, blockers, recent decisions
+2. **Then read if task needs it:**
+   - Planning / new features → `memory-bank/01-project.md` + `memory-bank/02-system.md`
+   - Bugfix / refactor → `memory-bank/04-progress.md` (check known issues)
+   - Quick fix / typo → Skip memory bank entirely, use `mem:fix`
+3. **Never read** `01-project.md` or `02-system.md` for trivial tasks
+
+## Update Protocol (after significant work)
+
+- Append decisions to `memory-bank/02-system.md` → `## Decisions` section
+- Overwrite `memory-bank/03-active.md` with new focus
+- Update `memory-bank/04-progress.md` Done/Open/Bugs
+
+## Commands
+
+- User says `mem:fix` → Skip memory bank, fix immediately
+- User says `mem:update` → Review and update all memory files
+- User says `mem:plan` → Read 01+02+03+04, then ask clarifying questions

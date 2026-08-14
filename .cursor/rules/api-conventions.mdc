@@ -1,0 +1,11 @@
+---
+description: "API route conventions and auth patterns"
+globs: ["**/api/**", "**/lib/auth/**"]
+---
+
+# API Conventions
+
+- All API routes must validate input with Zod before processing
+- Use `supabase.auth.getUser()` for server-side auth (never `getSession()`)
+- Return standardized error shape: `{ error: string, code: string }`
+- Log all errors to monitoring service before returning 500

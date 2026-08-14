@@ -1,0 +1,70 @@
+I have a new project idea. Before we write any code, initialize the memory bank.
+
+Read memory-bank/01-project.md — it contains empty placeholders. Interview me to fill it out properly.
+
+Ask me:
+1. What is the project name and one-sentence vision?
+2. Who is the primary user and what problem do they have?
+3. What are the 3 core features (MVP scope)?
+4. What are the hard constraints (budget, offline, privacy, platform)?
+
+Do NOT write code. Do NOT suggest tech stacks yet. Just fill out 01-project.md based on my answers and show me the result for approval.
+
+
+Now read 01-project.md (the approved project brief) and fill out memory-bank/02-system.md.
+
+Based on the constraints in 01-project.md, propose a tech stack and architecture. Show me:
+
+1. The complete stack with exact versions (e.g. "Next.js 15.2.3", not just "Next.js")
+2. A one-paragraph architecture description
+3. The folder structure you recommend
+4. 2-3 key decisions with rationale (e.g. "SQLite over PostgreSQL because offline-first")
+
+Again: do NOT generate code files yet. Just fill out 02-system.md and show me for approval.
+
+Now initialize the working context.
+
+1. Read 01-project.md and 02-system.md
+2. Fill out memory-bank/03-active.md with:
+   - Current Focus: "Initialize project scaffold and core dependencies"
+   - Recent Changes: empty
+   - Blockers: none
+   - Decisions Pending: "Folder structure confirmation"
+3. Fill out memory-bank/04-progress.md with:
+   - Done: empty
+   - Open: 
+     - [P0] Set up Next.js 15 project with TypeScript
+     - [P0] Install and configure Tailwind + shadcn/ui
+     - [P1] Create basic Kanban board layout
+   - Known Bugs: empty
+   - Questions: "Should we use App Router or Pages Router?"
+
+Show me both files for confirmation.
+
+Confirmed. Now switch to ACT mode.
+
+Read 03-active.md for current focus. Then execute the first open task: "Set up Next.js 15 project with TypeScript".
+
+Follow the stack defined in 02-system.md exactly. After you're done:
+1. Update 03-active.md: mark the completed task, set next focus
+2. Update 04-progress.md: move task to Done, update Open list
+3. Append any decisions (e.g. "Used App Router") to 02-system.md → ## Decisions
+
+Do not ask me for confirmation during implementation — just do it and report what changed.
+
+
+Phase 5: Jede weitere Session (der Standard-Workflow)
+Ab jetzt startest du jeden neuen Chat so:
+Standard-Start (normale Coding-Session)
+plain
+Read 03-active.md. What's the current focus?
+Cursor liest 03-active.md, bestätigt den Fokus, und du sagst:
+plain
+Implement [spezifische Teilaufgabe]. Update 03-active.md and 04-progress.md when done.
+Plan-Start (neues Feature, komplex)
+plain
+mem:plan — I want to add [Feature X]. Read 01-project.md and 02-system.md first,
+then ask me 2-3 clarifying questions before we write any code.
+Quick-Fix (Typo, kleiner Bug)
+plain
+mem:fix — Fix [spezifisches Problem in spezifischer Datei]. Skip memory bank.

@@ -1,0 +1,12 @@
+---
+description: "TypeScript/React coding standards for this project"
+globs: ["**/*.{ts,tsx}", "**/*.js"]
+---
+
+# Coding Standards
+
+- Use TypeScript strict mode
+- Prefer early returns over nested if-statements
+- Max 20 lines per function
+- Use named exports (no default exports except Next.js pages)
+- Follow existing patterns in `src/lib/` — reference before inventing new abstractions
