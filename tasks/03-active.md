@@ -4,19 +4,17 @@
 
 ## Current Focus
 
-Cast indicators / targeted AoE / projectile flight shipped.
-
-**Recommended next:** MOBA indicator-cast (press–drag aim) — builds on the visual layer.
+Indicator-cast shipped. **Next roadmap item: Postgres persistence.**
 
 
 
 ## Recent Changes
 
-- Shockwave = UNIT_TARGET; AoE blast around primary (`aoeRadius`)
+- `SKILLSHOT_LINEAR` / `SKILLSHOT_CONE` / `GROUND_CIRCLE` + aim fields on `cast_skill`
 
-- Cast VFX: melee beams, AoE rings on target, self buff bursts
+- Directional projectiles for shot/stun_bolt; cone blind; ground shockwave
 
-- Ranged AA/skill projectiles: distinct shapes, trails, impact on despawn
+- Client aim indicators + press-drag / hotkey confirm
 
 - Stubs → `gatcha1`
 

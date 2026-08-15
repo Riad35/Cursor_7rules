@@ -4,29 +4,27 @@
 
 ## Done (last 5 items)
 
-- [x] 2026-08-15: Cast indicators + AoE-around-target + full AA projectile flight (41/41)
+- [x] 2026-08-15: MOBA indicator-cast (linear/cone/ground) — tests 43/43
 
-- [x] 2026-08-15: Target frame + inspect + chat stubs + threat 0–100 + keyboard + VFX
+- [x] 2026-08-15: Cast indicators + AoE-around-target + AA projectile flight
 
-- [x] 2026-08-15: Collision + inventory UI + placeholder projectiles
+- [x] 2026-08-15: Target frame + inspect + chat + threat
 
-- [x] 2026-08-15: Continuous move + virtual joystick + skill bar CD/status UI + hitRadius
+- [x] 2026-08-15: Collision + inventory + projectiles
 
-- [x] 2026-08-15: Combat slice — AA, weapons/spirit, buffs, shove-lock
+- [x] 2026-08-15: Continuous move + skill bar + hitRadius
 
 
 
 ## Open
 
-- [ ] [P2]: **Next recommended** — MOBA indicator-cast (press-drag aim / SKILLSHOT_LINEAR)
-
-- [ ] [P2]: Postgres live (File-Save bleibt)
+- [ ] [P2]: **Next** — Postgres live (replace file-save guest)
 
 - [ ] [P3]: Real party / guild backends
 
-- [ ] [P3]: Echte seitliche Sprites
+- [ ] [P3]: Sprite pass + misc
 
-- [ ] [P3]: Plan-B Auto-Battle-Grid
+- [ ] [P3]: Smart-cast toggle / LoS
 
 
 

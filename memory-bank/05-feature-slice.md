@@ -16,45 +16,31 @@ Quelle: `Nostale_RPG_Dev_Package.md`. Engine: Unity 6.3 LTS only. Backend: Node.
 
 | Server-authoritative | Client sendet nur Inputs |
 
-| WebSocket | Move, Cast, Gacha, Equip, Inspect, Chat, Hello, sync_* |
+| Targeting | UNIT / NO_TARGET + **indicator-cast** (linear / cone / ground) |
 
-| Maps | `graybox_01` 36×20 + Blocked-Tiles |
+| Indicator skills | `shot`/`stun_bolt` linear; `blind_dust` cone; `shockwave` ground circle |
 
-| Targeting | Tab cycle; RMB menu; Space AA; offensive skills need lock |
+| Aim UX | Hold skill → aim indicator → release/LMB confirm; Esc cancel |
 
-| AoE | Centers on **selected target** (`aoeRadius`); shockwave UNIT_TARGET |
+| AoE | Ground shockwave at aim point; cast VFX rings |
 
-| Buffs | Self / NO_TARGET; sphere+ring cast VFX |
+| Projectiles | Homing AA + **directional** skillshots |
 
-| Cast indicators | Melee beam, AoE ring on target, buff burst (no aim mode) |
-
-| Projectiles | Ranged AA + bolts: spawn → trail → impact flash |
-
-| Target frame | Portrait, HP/MP, buffs, aggro 0–100%; red/yellow border |
-
-| Inventory | 20 slots; **B** grid |
-
-| Chat | World / Server / Guild / Map; whisper; party/guild stubbed |
-
-| Combat | Weapons+spirit; buffs/shields; shove lock; body collision |
+| Target frame / chat / threat / inventory | As before |
 
 
 
-## Later (recommended next)
+## Roadmap (locked order)
 
 
 
-| Priority | Feature | Why |
+1. [x] MOBA indicator-cast
 
-|----------|---------|-----|
+2. [ ] **Next: Postgres** persistence
 
-| **1** | MOBA **indicator-cast** (press-drag aim) | Visual layer exists; next step is real skillshot aim vectors |
+3. [ ] Real party / guild
 
-| 2 | Real party / guild backends | UI stubs ready |
-
-| 3 | Sprite pass | Replace cubes |
-
-| 4 | Postgres live | File-save works |
+4. [ ] Sprite pass + misc
 
 
 
@@ -66,6 +52,6 @@ Quelle: `Nostale_RPG_Dev_Package.md`. Engine: Unity 6.3 LTS only. Backend: Node.
 
 |---------|-------|
 
-| Godot / Photon / Unity Dedicated Auth | Node SoT |
+| Smart-cast toggle / LoS | Later |
 
-| Full MMO | longterm |
+| Godot / Photon | Node SoT |
