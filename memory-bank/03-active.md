@@ -1,16 +1,15 @@
 # Active Context
 
 ## Current Focus
-Gray-Box Slice+ fertig: HUD (HP/MP/Pity), Lock-on (Tab), Damage-Floats, Guest-Save (File). Server neu starten, Unity Play neu laden. Nächster großer Block: echte Art oder Postgres statt File-Save.
+Roadmap A→B→C implementiert. Server neu starten, Unity Play: Smooth-Move + Edge-Kamera, 6 Waffen (Z–N), Skills Q/E/R/F, große Map 36×20 mit 4 Gegnern.
 
 ## Recent Changes (last 3 sessions max)
-- 2026-08-15: HUD + Lock-on + sync_vitals + request_hello/guestToken + File-Persist `.runtime/saves`
-- 2026-08-15: User bestätigt Connect/WASD/Skills/Gacha
-- 2026-08-15: Input System + Unlit GrayBoxWorld
+- 2026-08-15: Phase A Feel — tile lerp 0.15s, edge camera safe-zone
+- 2026-08-15: Phase B Combat — Stats/Elemente/DamageTypes, 6 Waffen+Equip, Dash/Stun/DoT/Buff
+- 2026-08-15: Phase C World — Map 36×20, 4 Monster + Aggro/Leash; tests 19/19
 
 ## Blockers
-- keine für Slice
-- Postgres noch nicht live (File-Persist als Zwischenlösung)
+- keine
 
 ## Decisions Pending
 - keine

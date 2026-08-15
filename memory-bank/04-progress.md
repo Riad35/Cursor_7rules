@@ -1,21 +1,39 @@
 # Progress
 
+
+
 ## Done (last 5 items)
-- [x] 2026-08-15: Client HUD — HP/MP/Pity bars, lock-on ring, damage floats, Tab target
-- [x] 2026-08-15: Server `sync_vitals` + `request_hello` + guest file persist (pity/inv/pos)
-- [x] 2026-08-15: Gray-Box e2e bestätigt (Connect, WASD, Skills, Gacha)
-- [x] 2026-08-15: Input System Keyboard.current + Unlit placeholders
-- [x] 2026-08-15: Unit tests Combat/Gacha 12/12
+
+- [x] 2026-08-15: Collision + inventory UI + placeholder projectiles (tests 36/36)
+
+- [x] 2026-08-15: Continuous move + virtual joystick + skill bar CD/status UI + hitRadius
+
+- [x] 2026-08-15: Combat slice — AA, weapons/spirit, buffs, shove-lock
+
+- [x] 2026-08-15: Range split; P3 shove/pull/blind/AoE
+
+- [x] 2026-08-15: Phase A–C gray-box
+
+
 
 ## Open
-- [ ] [P2]: Postgres live (Schema da; jetzt File-Save unter `.runtime/saves`)
-- [ ] [P2]: Monster-Respawn wenn HP 0
-- [ ] [P3]: Echte seitliche Sprites statt Farbquadrate
-- [ ] [P3]: Plan-B Auto-Battle-Grid — zurückgestellt
+
+- [ ] [P2]: Postgres live (File-Save bleibt)
+
+- [ ] [P3]: Echte seitliche Sprites
+
+- [ ] [P3]: Plan-B Auto-Battle-Grid
+
+- [ ] [P3]: MOBA skillshot / ground-AoE indicators (targeting-system-feature.md)
+
+
 
 ## Known Bugs
-- Port 7777: alter Node → `EADDRINUSE`
-- Nach Server-Code-Update: alten Prozess killen und `npm run dev` neu
+
+- Port 7777 `EADDRINUSE` → alten Node killen, `npm run dev`
+
+
 
 ## Questions for Next Session
+
 - keine

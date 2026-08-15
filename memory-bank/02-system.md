@@ -21,6 +21,9 @@ Der Unity-Client rendert, nimmt Input entgegen und darf Bewegung lokal vorhersag
 ## Decisions (append-only, newest top)
 | Date | Decision | Rationale |
 |------|----------|-----------|
+| 2026-08-15 | Roadmap A→B→C: Feel then Combat then World | Solo timebox; Grid-Snap soft + edge camera first |
+| 2026-08-15 | Grid-Snap soft (client lerp) not continuous walk | Keeps server tile validation; better feel |
+| 2026-08-15 | Edge camera (safe zone ~72%) not hard follow | Less motion sickness; Nostale-like framing |
 | 2026-08-15 | Name `gAAAcha`, Setting original 2.5D-Fantasy | Repo-Name ist der Projektname; keine lizenzierte Nostale-Welt |
 | 2026-08-15 | PC zuerst, Mobile später | Gray-Box und Stubs sind Tastatur; Unity-Build bleibt Standalone |
 | 2026-08-15 | Kein Store/Payment im MVP | Passion-Project; Payment-Architektur nicht bauen |
