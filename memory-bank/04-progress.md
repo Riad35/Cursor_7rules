@@ -1,21 +1,21 @@
 # Progress
 
 ## Done (last 5 items)
-- [x] 2026-08-15: Unity Gray-Box end-to-end bestätigt (Connect, Grid, WASD, Skills, Gacha)
-- [x] 2026-08-15: Input System Only → Keyboard.current; Unlit Player/Slime-Platzhalter
-- [x] 2026-08-15: NetworkBootstrap + GrayBoxWorld in `client/Unity/gatcha1`
-- [x] 2026-08-15: Server Gacha/Pity + Combat-Validierung + Tests
-- [x] 2026-08-15: P0s geschlossen (Name, PC-first, Passion-Project)
+- [x] 2026-08-15: Client HUD — HP/MP/Pity bars, lock-on ring, damage floats, Tab target
+- [x] 2026-08-15: Server `sync_vitals` + `request_hello` + guest file persist (pity/inv/pos)
+- [x] 2026-08-15: Gray-Box e2e bestätigt (Connect, WASD, Skills, Gacha)
+- [x] 2026-08-15: Input System Keyboard.current + Unlit placeholders
+- [x] 2026-08-15: Unit tests Combat/Gacha 12/12
 
 ## Open
-- [ ] [P2]: HP-/Pity-Anzeige im Client (nicht nur Status-Text)
-- [ ] [P2]: Sichtbares Lock-on auf Slime
-- [ ] [P2]: PostgreSQL anbinden (Schema existiert)
-- [ ] [P3]: Echte Art (seitliche Sprites) statt Farbquadrate
+- [ ] [P2]: Postgres live (Schema da; jetzt File-Save unter `.runtime/saves`)
+- [ ] [P2]: Monster-Respawn wenn HP 0
+- [ ] [P3]: Echte seitliche Sprites statt Farbquadrate
 - [ ] [P3]: Plan-B Auto-Battle-Grid — zurückgestellt
 
 ## Known Bugs
-- Port 7777: alter Node-Prozess → `EADDRINUSE`
+- Port 7777: alter Node → `EADDRINUSE`
+- Nach Server-Code-Update: alten Prozess killen und `npm run dev` neu
 
 ## Questions for Next Session
 - keine
