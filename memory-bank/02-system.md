@@ -10,10 +10,10 @@
 - Static data: JSON (items, monsters, skills, maps) — zur Server-Startzeit geladen
 - Cache/Session/Pity: Redis 7.x
 - CDN: Cloudflare
-- Analytics: Firebase
+- Analytics: aus im MVP (Privacy)
 - Auth: Gast-Login zuerst, später OAuth
-- Payment: Apple/Google Store-APIs — erst relevant, sobald Monetarisierung geklärt ist (siehe 01-project.md, offen)
-- Hosting: [noch nicht festgelegt]
+- Payment: keines im MVP (Passion-Project, kein Store)
+- Hosting: lokal, bis ein Deploy ansteht
 
 ## Architecture
 Der Unity-Client rendert, nimmt Input entgegen und darf Bewegung lokal vorhersagen, besitzt aber keine spielentscheidende Logik. Jede Aktion (Laufen, Skill, Gacha, Fortschritt) geht als `request_*` über WebSocket (Kampf/Overworld) oder REST (Meta) an einen monolithischen Node.js/TypeScript-Service. Der Server validiert (Speed, Range, Cooldown, Mana, Rate-Limit), persistiert in PostgreSQL, cached Hot-State in Redis und broadcastet `sync_*` an den Client. Maps sind diskrete IDs mit Ladescreen; Instanzen (Party-Kopien) nutzen später dieselbe Map-Pipeline, ohne sie im MVP zu bauen.
@@ -21,6 +21,14 @@ Der Unity-Client rendert, nimmt Input entgegen und darf Bewegung lokal vorhersag
 ## Decisions (append-only, newest top)
 | Date | Decision | Rationale |
 |------|----------|-----------|
+| 2026-08-15 | Name `gAAAcha`, Setting original 2.5D-Fantasy | Repo-Name ist der Projektname; keine lizenzierte Nostale-Welt |
+| 2026-08-15 | PC zuerst, Mobile später | Gray-Box und Stubs sind Tastatur; Unity-Build bleibt Standalone |
+| 2026-08-15 | Kein Store/Payment im MVP | Passion-Project; Payment-Architektur nicht bauen |
+| 2026-08-15 | Privacy: nur Gast-Token + Spielstand | Keine Analytics/OAuth bis ein Release-Grund existiert |
+| 2026-08-15 | Ordnerstruktur aus 02-system bestätigt | Ziel-Layout; Gray-Box darf flach in `server/src` bleiben bis zum ersten Split |
+| 2026-08-15 | Pity: Soft ab 50, Hard 80, Basis-SSR 2%, 10er mind. 1 SR | Fair und testbar; Counter ist sichtbar in `sync_gacha` |
+| 2026-08-15 | Gacha jetzt über WebSocket `request_gacha` | Passt zur Gray-Box; REST-Historie kommt mit Auth/Postgres |
+| 2026-08-15 | Schema in `server/db/schema.sql`, Runtime in-memory | Vertrag steht; kein Postgres-Zwang solange Unity fehlt |
 | 2026-08-15 | Spielrepo `gAAAcha` getrennt von Rules-Repo `Cursor_7rules` | Memory-Bank/.cursor bleiben Template; Spielcode nicht in dasselbe origin mischen |
 | 2026-08-15 | Unity 6.3 LTS only — Godot aus Nostale-Paket verworfen | Einzige Client-Engine; Godot/ENet/GDScript und Photon als Netz-Ersatz vom Tisch |
 | 2026-08-15 | Nostale-Kampf (lock-on) als Plan A; Auto-Battle-Grid als Plan B | Gewünschte Kampfidentität; Grid und Collector-Tiefe später optional |
@@ -37,7 +45,7 @@ Der Unity-Client rendert, nimmt Input entgegen und darf Bewegung lokal vorhersag
 - Static JSON vs DB: Katalog/Skills/Maps als Dateien; Spielerzustand in PostgreSQL
 - Modular monolith: `/src/net`, `/combat`, `/maps`, `/gacha` — InstanceManager später im gleichen `/maps`
 
-## Folder structure (proposal — not confirmed)
+## Folder structure (confirmed)
 **Unity-Projekt (Client):**
 ```
 /Assets
@@ -74,5 +82,9 @@ Der Unity-Client rendert, nimmt Input entgegen und darf Bewegung lokal vorhersag
   /monsters.json
   /skills.json
   /maps.json
+  /banners.json
+  /classes.json
+/db
+  /schema.sql
 /tests
 ```

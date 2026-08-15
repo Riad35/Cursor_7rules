@@ -1,4 +1,4 @@
-# Project: [OFFEN — noch nicht festgelegt]
+# Project: gAAAcha
 
 ## Vision
 Ein solo-entwickeltes, faires 2D-Gacha-RPG: kleine 2.5D-Overworld, Charaktere und Gegner in seitlicher Ansicht, Nostale-artiges lock-on Kampfsystem, serverseitig garantiertes Pity, selbst produzierte KI-gestützte Charakterkunst. Engine ist fest Unity 6.3 LTS.
@@ -12,14 +12,17 @@ Ein solo-entwickeltes, faires 2D-Gacha-RPG: kleine 2.5D-Overworld, Charaktere un
 Auto-Battle-Grid und Collector-Tiefe aus den anderen Referenzen (Arknights-Fairness, Sword-x-Staff-Gacha) bleiben eine optionale spätere Kampfschicht oder ein Fallback — nicht der MVP.
 
 ## Target User
-- Primary: [OFFEN — Entwurf, nicht bestätigt] Spieler:innen von Gacha-/Collector-RPGs brauchen transparente Drop-Raten und ein spürbares Pity-System, weil viele etablierte Titel intransparent oder zeitintensiv wirken
-- Ableitung aus der bisherigen "Fair-ish Gacha"-Ausrichtung, keine bestätigte Zielgruppendefinition
+- Primary: Spieler:innen von Gacha-/Collector-RPGs, die transparente Drop-Raten und ein sichtbares Pity-System wollen, ohne aggressive Monetarisierung
+
+## Setting
+Original 2.5D-Fantasy, seitliche Ansicht. Keine Nostale-IP. Slice-Platzhalter: Wanderer, Slime, Aurel, Nyla.
 
 ## Constraints
 - Engine: Unity 6.3 LTS only — keine zweite Client-Engine (kein Godot)
-- Solo-Projekt, kein externes Funding — kostenlose/günstige Tools bevorzugt (Unity Personal, Firebase Free Tier, o. Ä.)
-- Offline: Nein — Gacha-Fairness und Combat-Validierung erfordern serverseitige Logik, Online-Verbindung zwingend
-- Privacy: [OFFEN] noch nicht besprochen (z. B. DSGVO, Datenspeicherung)
-- Plattform: [OFFEN] Mobile / PC / beides — blockiert Unity-Build-Settings und Input-System
+- Solo-Projekt, kein externes Funding — kostenlose/günstige Tools bevorzugt (Unity Personal)
+- Offline: Nein — Gacha-Fairness und Combat-Validierung erfordern serverseitige Logik
+- Privacy: MVP speichert nur Gast-Token + Spielstand. Keine Analytics, kein OAuth, keine personenbezogenen Profile
+- Plattform: **PC zuerst** (Tastatur). Mobile später, nicht im ersten Unity-Projekt
+- Monetarisierung: **Passion-Project** — kein Store, kein Payment im MVP
 - Zeitbudget: 5–15 Std./Woche (Teilzeit)
 - Team: Solo, unterstützt durch Cursor Pro

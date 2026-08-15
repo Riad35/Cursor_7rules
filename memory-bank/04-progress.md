@@ -1,24 +1,20 @@
 # Progress
 
 ## Done (last 5 items)
-- [x] 2026-08-15: gAAAcha Server-Gray-Box — 1 Map, 1 Klasse, 3 Skills, 1 Monster, WebSocket request/sync
-- [x] 2026-08-15: Repos getrennt — Spielcode in `gAAAcha`, Rules/Memory-Bank in `Cursor_7rules`
-- [x] 2026-08-15: Nostale-Paket — Plan A (lock-on + 2.5D-Overworld), Plan B (Grid zurückgestellt), MMO-longterm
-- [x] 2026-08-15: Engine hart festgelegt — Unity 6.3 LTS only
-- [x] 2026-08-15: Memory-Bank 01–05 angelegt
+- [x] 2026-08-15: P0s geschlossen — Name, PC-first, Passion-Project, Privacy, Ordnerstruktur
+- [x] 2026-08-15: Server-Gacha mit sichtbarem Pity (Hard 80 / Soft 50 / 2% SSR / 10er-SR-Floor)
+- [x] 2026-08-15: PostgreSQL-Schema (`accounts`, `characters`, `inventory_slots`, `pity_counters`, `gacha_history`)
+- [x] 2026-08-15: Unit-Tests Combat + Gacha — 12/12 grün (`npm test` in `gAAAcha/server`)
+- [x] 2026-08-15: Unity-Stubs um `SendGachaAsync` / `RequestGacha` erweitert
 
 ## Open
-- [ ] [P0]: Zielplattform festlegen (blockiert Unity-Build-Settings)
-- [ ] [P0]: Monetarisierungs-Absicht festlegen (blockiert Payment-Architektur)
-- [ ] [P0]: Projektname & Setting/Thema festlegen
-- [ ] [P1]: Ordnerstruktur (02-system.md) bestätigen
-- [ ] [P1]: Unity 6.3 LTS 2D-Projekt anlegen und `client/Stubs` einhängen
-- [ ] [P1]: PostgreSQL-Schema-Entwurf (Map-IDs, Inventar-Slots) — Gray-Box ist noch In-Memory
-- [ ] [P2]: Server-seitige Gacha-Pity-Logik implementieren
+- [ ] [P1]: Unity 6.3 LTS 2D-Projekt anlegen und `client/Stubs` nach `Assets/Scripts/Network/` kopieren
+- [ ] [P2]: Gray-Box gegen echten Unity-Client testen (Move / Cast / Gacha)
+- [ ] [P2]: PostgreSQL anbinden (Schema existiert, Runtime ist noch In-Memory)
 - [ ] [P3]: Plan-B Auto-Battle-Grid — zurückgestellt, nicht im MVP
 
 ## Known Bugs
-- keine — Gray-Box-Server ist lokal, noch nicht gegen Unity getestet
+- keine — Server-Tests grün; Unity-Client noch nicht angebunden
 
 ## Questions for Next Session
-- Siehe Decisions Pending in 03-active.md (Plattform, Monetarisierung, Name, Ordnerstruktur)
+- keine
