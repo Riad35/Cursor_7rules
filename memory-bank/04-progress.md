@@ -1,20 +1,21 @@
 # Progress
 
 ## Done (last 5 items)
-- [x] 2026-08-15: Sichtbare Gray-Box — Grid, cyan=You, green=Slime, sync_move/sync_state
-- [x] 2026-08-15: Unity `gatcha1` + NetworkBootstrap verbunden (User bestätigt)
-- [x] 2026-08-15: Server-Gacha/Pity + test:client grün
-- [x] 2026-08-15: PostgreSQL-Schema + Unit-Tests Combat/Gacha
+- [x] 2026-08-15: Unity Gray-Box end-to-end bestätigt (Connect, Grid, WASD, Skills, Gacha)
+- [x] 2026-08-15: Input System Only → Keyboard.current; Unlit Player/Slime-Platzhalter
+- [x] 2026-08-15: NetworkBootstrap + GrayBoxWorld in `client/Unity/gatcha1`
+- [x] 2026-08-15: Server Gacha/Pity + Combat-Validierung + Tests
 - [x] 2026-08-15: P0s geschlossen (Name, PC-first, Passion-Project)
 
 ## Open
-- [ ] [P1]: In Unity Play — WASD bewegt cyanen Block Richtung Slime; 2 = Shot
-- [ ] [P2]: Besseres Skill-/HP-Feedback (Zahlen, Flash dauerhaft)
-- [ ] [P2]: PostgreSQL anbinden
+- [ ] [P2]: HP-/Pity-Anzeige im Client (nicht nur Status-Text)
+- [ ] [P2]: Sichtbares Lock-on auf Slime
+- [ ] [P2]: PostgreSQL anbinden (Schema existiert)
+- [ ] [P3]: Echte Art (seitliche Sprites) statt Farbquadrate
 - [ ] [P3]: Plan-B Auto-Battle-Grid — zurückgestellt
 
 ## Known Bugs
-- Port 7777: alter Node-Prozess → `EADDRINUSE`; Prozess beenden, `npm run dev` neu
+- Port 7777: alter Node-Prozess → `EADDRINUSE`
 
 ## Questions for Next Session
 - keine

@@ -1,16 +1,16 @@
 # Active Context
 
 ## Current Focus
-Sichtbare Gray-Box ist drin: Grid + cyan Spieler + grüner Slime. User: Play → WASD prüfen. Danach Lock-on / Skill-Feedback verfeinern oder Postgres.
+Gray-Box Vertical Slice läuft in Unity: Connect, Sicht, WASD, Skills, Gacha. Nächster sinnvoller Schritt: HP/Pity-UI oder Postgres-Anbindung — oder kleine QoL (Lock-on sichtbar, Skill-Feedback).
 
 ## Recent Changes (last 3 sessions max)
-- 2026-08-15: GrayBoxWorld — Tile-Grid, Player/Slime-Platzhalter, Kamera auf Map zentriert
-- 2026-08-15: Unity `gatcha1` verbunden (NetworkBootstrap + OnGUI); Scripts im richtigen Projekt
-- 2026-08-15: Server Gray-Box + Gacha/Pity getestet
+- 2026-08-15: User bestätigt — Connect, sichtbare Platzhalter, WASD, Skills/Gacha funktionieren
+- 2026-08-15: Input System Fix (Keyboard.current); Unlit-Sprites; GrayBoxWorld
+- 2026-08-15: Server Gray-Box + Pity/Gacha + Unity `gatcha1`
 
 ## Blockers
-- Plan-A braucht später echte seitliche Sprites/VFX (Platzhalter reichen für Slice)
-- Postgres nur Schema, Runtime noch In-Memory
+- Keine für den Slice
+- Später: echte seitliche Sprites/VFX; Postgres noch In-Memory
 
 ## Decisions Pending
 - keine
