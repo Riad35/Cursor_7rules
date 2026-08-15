@@ -4,19 +4,21 @@
 
 ## Current Focus
 
-Collision / inventory / projectiles shipped. Next: sprites, Postgres, or MOBA skillshot indicators.
+Cast indicators / targeted AoE / projectile flight shipped.
+
+**Recommended next:** MOBA indicator-cast (press–drag aim) — builds on the visual layer.
 
 
 
 ## Recent Changes
 
-- Soft circle collision: player vs walls/enemies/players; monsters skip mutual collision
+- Shockwave = UNIT_TARGET; AoE blast around primary (`aoeRadius`)
 
-- Starter inventory (20 slots, all current items) on `sync_state`; **B** OnGUI grid + click equip
+- Cast VFX: melee beams, AoE rings on target, self buff bursts
 
-- Ranged skills/AA spawn `projectileSpeed` travel; melee stays instant; client placeholder quads
+- Ranged AA/skill projectiles: distinct shapes, trails, impact on despawn
 
-- Stubs copied → `gAAAcha/client/Unity/gatcha1/Assets/Scripts/Network/`
+- Stubs → `gatcha1`
 
 
 

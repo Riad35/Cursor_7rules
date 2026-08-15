@@ -1,15 +1,17 @@
-# Progress
-
-## Done
-- Continuous move + joystick + skill bar + hitRadius (32/32 tests)
-- Combat AA/weapons/spirit/buffs/shove-lock
-- Stubs synced into `gatcha1`
-
-## Open
-- [P2] Postgres live
-- [P3] Echte seitliche Sprites
-- [P3] Plan-B Auto-Battle-Grid
-- [P3] MOBA skillshot indicators
-
-## Known Bugs
-- Port 7777 `EADDRINUSE` → alten Node killen, `npm run dev`
+# Progress
+
+## Done
+- Cast indicators + AoE-around-target + full AA projectile flight (41/41)
+- Target frame + inspect + chat + threat
+- Collision + inventory + projectiles
+- Stubs synced into `gatcha1`
+
+## Open
+- [P2] **Next:** MOBA indicator-cast (press-drag aim)
+- [P2] Postgres live
+- [P3] Real party / guild
+- [P3] Echte seitliche Sprites
+- [P3] Plan-B Auto-Battle-Grid
+
+## Known Bugs
+- Port 7777 `EADDRINUSE` → alten Node killen, `npm run dev`

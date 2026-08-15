@@ -16,45 +16,45 @@ Quelle: `Nostale_RPG_Dev_Package.md`. Engine: Unity 6.3 LTS only. Backend: Node.
 
 | Server-authoritative | Client sendet nur Inputs |
 
-| WebSocket | Move, Cast, Gacha, Equip, Hello, sync_cooldowns/status/inventory/projectiles |
+| WebSocket | Move, Cast, Gacha, Equip, Inspect, Chat, Hello, sync_* |
 
 | Maps | `graybox_01` 36×20 + Blocked-Tiles |
 
-| Hit volume | `hitRadius` per entity (edge-to-edge range) |
+| Targeting | Tab cycle; RMB menu; Space AA; offensive skills need lock |
 
-| Movement | Hold WASD / left virtual joystick; ticks × moveSpeed; body collision vs enemies/players |
+| AoE | Centers on **selected target** (`aoeRadius`); shockwave UNIT_TARGET |
 
-| Skill UI | Placeholder skill bar (all class skills) + CD fills + buff timers |
+| Buffs | Self / NO_TARGET; sphere+ring cast VFX |
 
-| Inventory | 20 slots seeded with all items; **B** grid; click equip weapon/spirit |
+| Cast indicators | Melee beam, AoE ring on target, buff burst (no aim mode) |
 
-| Projectiles | Ranged UNIT_TARGET / ranged AA travel with `projectileSpeed`; melee instant |
+| Projectiles | Ranged AA + bolts: spawn → trail → impact flash |
 
-| Targeting | NO_TARGET / UNIT_TARGET (lock-on Tab / RMB); skillshots Later |
+| Target frame | Portrait, HP/MP, buffs, aggro 0–100%; red/yellow border |
 
-| Combat | Space AA; skills; weapons+spirit; buffs/shields; shove lock |
+| Inventory | 20 slots; **B** grid |
 
-| Camera | Edge ~72% safe zone; soft lerp |
+| Chat | World / Server / Guild / Map; whisper; party/guild stubbed |
 
-| Gacha | starter banner, file-save guest |
-
-
-
-## Later
+| Combat | Weapons+spirit; buffs/shields; shove lock; body collision |
 
 
 
-| Feature | Vorbereitung |
+## Later (recommended next)
 
-|---------|--------------|
 
-| Postgres | Schema exists; file persist now |
 
-| MOBA skillshots / ground AoE | See `targeting-system-feature.md` |
+| Priority | Feature | Why |
 
-| Echte seitliche Sprites | Platzhalter squares |
+|----------|---------|-----|
 
-| Plan-B Auto-Battle-Grid | zurückgestellt |
+| **1** | MOBA **indicator-cast** (press-drag aim) | Visual layer exists; next step is real skillshot aim vectors |
+
+| 2 | Real party / guild backends | UI stubs ready |
+
+| 3 | Sprite pass | Replace cubes |
+
+| 4 | Postgres live | File-save works |
 
 
 
