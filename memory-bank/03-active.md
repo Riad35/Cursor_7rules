@@ -1,15 +1,22 @@
-# Active Context
+# 03-active.md — Aktueller Arbeitskontext
 
 ## Current Focus
-Roadmap A→B→C implementiert. Server neu starten, Unity Play: Smooth-Move + Edge-Kamera, 6 Waffen (Z–N), Skills Q/E/R/F, große Map 36×20 mit 4 Gegnern.
 
-## Recent Changes (last 3 sessions max)
-- 2026-08-15: Phase A Feel — tile lerp 0.15s, edge camera safe-zone
-- 2026-08-15: Phase B Combat — Stats/Elemente/DamageTypes, 6 Waffen+Equip, Dash/Stun/DoT/Buff
-- 2026-08-15: Phase C World — Map 36×20, 4 Monster + Aggro/Leash; tests 19/19
+**Nostale gap slice shipped:** Postgres+login wiring, procedural sprite pass, XP/levels, full gear slots, crypt dungeon instances. Next candidates: art polish / trade / party HUD / more biomes.
+
+## Recent Changes
+
+- `DATABASE_URL` + schema on boot; register/login (`L`); file fallback
+- Biome tiles + silhouette sprites (`SpriteCatalog`)
+- XP on kill, armor/helm/boots/gloves/accessory equip
+- `dungeon_crypt` private instances (party-shared); exit portal
+- Classes: warrior / mage / archer selectable at create
+- Server tests **52/52**; stubs → gatcha1
 
 ## Blockers
-- keine
+
+- keine (set `DATABASE_URL` in `gAAAcha/server/.env` to enable Postgres)
 
 ## Decisions Pending
-- keine
+
+- none critical

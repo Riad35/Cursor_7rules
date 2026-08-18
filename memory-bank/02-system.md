@@ -21,6 +21,12 @@ Der Unity-Client rendert, nimmt Input entgegen und darf Bewegung lokal vorhersag
 ## Decisions (append-only, newest top)
 | Date | Decision | Rationale |
 |------|----------|-----------|
+| 2026-08-18 | Postgres optional via DATABASE_URL; dual-write file+DB; register/login over WS | File fallback keeps CI/dev without DB; schema applied on boot |
+| 2026-08-18 | Crypt portals create private instances (`mapId#inst`); party shares one | Package Phase 5 without multi-process yet |
+| 2026-08-18 | Procedural SpriteCatalog silhouettes + biome tiles | Replace graybox before commissioned art |
+| 2026-08-18 | Playable hub: town+field portals, shops, thin quests, Homestone, neutrals (graybox) | First end-to-end MMO loop before art/Postgres |
+| 2026-08-18 | Party max 4 + default guild Ashen Legion (in-memory) | Social slice before Postgres; guild stub is enough for chat |
+| 2026-08-18 | Postgres deferred until user has Docker/local install | No blocker for gray-box; file/guest persist stays |
 | 2026-08-15 | Roadmap A→B→C: Feel then Combat then World | Solo timebox; Grid-Snap soft + edge camera first |
 | 2026-08-15 | Grid-Snap soft (client lerp) not continuous walk | Keeps server tile validation; better feel |
 | 2026-08-15 | Edge camera (safe zone ~72%) not hard follow | Less motion sickness; Nostale-like framing |

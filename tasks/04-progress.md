@@ -1,15 +1,11 @@
 # Progress
 
 ## Done
-- MOBA indicator-cast (43/43)
-- Cast indicators + targeted AoE + AA projectiles
-- Target UI / chat / threat
-- Stubs synced into `gatcha1`
+- Playable Hub Loop (graybox) + prior combat/social
 
 ## Open
-- [P2] **Next:** Postgres live
-- [P3] Real party / guild
-- [P3] Sprite pass + misc
+- Sprite pass
+- Postgres (deferred)
 
 ## Known Bugs
-- Port 7777 `EADDRINUSE` → alten Node killen, `npm run dev`
+- Port 7777 busy → kill old node

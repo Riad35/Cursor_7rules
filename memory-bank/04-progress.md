@@ -1,39 +1,17 @@
 # Progress
 
-
-
-## Done (last 5 items)
-
-- [x] 2026-08-15: MOBA indicator-cast (linear/cone/ground) — tests 43/43
-
-- [x] 2026-08-15: Cast indicators + AoE-around-target + AA projectile flight
-
-- [x] 2026-08-15: Target frame + inspect + chat + threat
-
-- [x] 2026-08-15: Collision + inventory + projectiles
-
-- [x] 2026-08-15: Continuous move + skill bar + hitRadius
-
-
+## Done
+- MOBA indicator-cast
+- Party / guild
+- Playable Hub Loop (graybox)
+- **Gap slice:** Postgres persist/login, sprite silhouettes, XP/levels, full equip, crypt instances
+- Server tests 52/52; stubs → gatcha1
 
 ## Open
-
-- [ ] [P2]: **Next** — Postgres live (replace file-save guest)
-
-- [ ] [P3]: Real party / guild backends
-
-- [ ] [P3]: Sprite pass + misc
-
-- [ ] [P3]: Smart-cast toggle / LoS
-
-
+- [P3] Real art / tilesets / VFX (beyond procedural silhouettes)
+- [P3] Trade, friends, party HUD, more biomes/dungeons
+- [P4] MMO-scale (multi-process, auction, etc.)
 
 ## Known Bugs
-
 - Port 7777 `EADDRINUSE` → alten Node killen, `npm run dev`
-
-
-
-## Questions for Next Session
-
-- keine
+- Login/register needs live Postgres (`DATABASE_URL`); otherwise `db_offline`

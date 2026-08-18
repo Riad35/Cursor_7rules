@@ -1,57 +1,30 @@
-# Feature Slice — Nostale → unser Spiel
+# Feature Slice — Gap analysis build
 
+## Live
 
+| Feature | Status |
+|---------|--------|
+| Town / field / crypt maps | Live |
+| Portals + crypt **instances** | Live |
+| Shops + armor gear | Live |
+| Homestone / quests / neutrals | Live |
+| Char create + class select | Live |
+| Inventory `I`, gear LMB equip | Live |
+| Postgres persist + register/login (`L`) | Live (needs DATABASE_URL) |
+| File save fallback | Live |
+| Procedural sprites / biome tiles | Live |
+| XP / levels on kill | Live |
 
-Quelle: `Nostale_RPG_Dev_Package.md`. Engine: Unity 6.3 LTS only. Backend: Node.js bleibt Wahrheit.
+## Roadmap
 
+1. [x] Indicator-cast
+2. [x] Postgres + login
+3. [x] Party/guild
+4. [x] Playable hub loop
+5. [x] Sprite pass (procedural)
+6. [x] XP / full equip / dungeon instance
+7. [ ] Commissioned art / trade / party HUD
 
+## Skip now
 
-## Take (MVP — live in Gray-Box)
-
-
-
-| Feature | Wie bei uns |
-
-|---------|-------------|
-
-| Server-authoritative | Client sendet nur Inputs |
-
-| Targeting | UNIT / NO_TARGET + **indicator-cast** (linear / cone / ground) |
-
-| Indicator skills | `shot`/`stun_bolt` linear; `blind_dust` cone; `shockwave` ground circle |
-
-| Aim UX | Hold skill → aim indicator → release/LMB confirm; Esc cancel |
-
-| AoE | Ground shockwave at aim point; cast VFX rings |
-
-| Projectiles | Homing AA + **directional** skillshots |
-
-| Target frame / chat / threat / inventory | As before |
-
-
-
-## Roadmap (locked order)
-
-
-
-1. [x] MOBA indicator-cast
-
-2. [ ] **Next: Postgres** persistence
-
-3. [ ] Real party / guild
-
-4. [ ] Sprite pass + misc
-
-
-
-## Skip
-
-
-
-| Feature | Grund |
-
-|---------|-------|
-
-| Smart-cast toggle / LoS | Later |
-
-| Godot / Photon | Node SoT |
+MMO-scale split, auction, friends list, LoS
