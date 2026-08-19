@@ -1,17 +1,25 @@
 # Progress
 
 ## Done
-- MOBA indicator-cast
-- Party / guild
-- Playable Hub Loop (graybox)
-- **Gap slice:** Postgres persist/login, sprite silhouettes, XP/levels, full equip, crypt instances
-- Server tests 52/52; stubs → gatcha1
+- Hub + gap + social/content slices
+- Polish: trade items, skill tree, auction, instance timer, boss phases
+- Tower + Login + Classes
+- Art pass 1: Craftpix swordsman/slime + terrain
+- 2.5D camera + facing sprites + 12×12 inventory + Esc settings/logout
+- Camera-basis move/facing fix
+- Combat anims (death/hurt/attack/walk+run attack) + lock outline on sprite (+2px)
+- Test arena: cannon flame, ragdoll OOC heal, portals A↔B, hazard tick ground
+- Esc UI scale via GUI.matrix + resolution prefs apply
+- Server tests **59/59**
+- Project index: `memory-bank/00-index.md`
 
 ## Open
-- [P3] Real art / tilesets / VFX (beyond procedural silhouettes)
-- [P3] Trade, friends, party HUD, more biomes/dungeons
-- [P4] MMO-scale (multi-process, auction, etc.)
+- [P1] Hygiene: archive legacy Unity tree; README sync note
+- [P2] Art: NPCs, class sprites, tiles/VFX polish
+- [P3] Content: more tower/quests/shops from data
+- [P4] MMO-scale (multi-process, persist social/auction, real guilds)
 
 ## Known Bugs
-- Port 7777 `EADDRINUSE` → alten Node killen, `npm run dev`
-- Login/register needs live Postgres (`DATABASE_URL`); otherwise `db_offline`
+- Port 7777 `EADDRINUSE` → kill old node
+- Login/register needs `DATABASE_URL` (file slots still work for guests)
+- Esc resolution in Unity Editor needs matching Game view size (standalone OK)

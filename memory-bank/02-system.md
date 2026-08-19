@@ -21,6 +21,14 @@ Der Unity-Client rendert, nimmt Input entgegen und darf Bewegung lokal vorhersag
 ## Decisions (append-only, newest top)
 | Date | Decision | Rationale |
 |------|----------|-----------|
+| 2026-08-19 | Default spawn `test_arena` for combat/VFX testing (cannon, ragdoll, portals, hazards) | User asked for starting scene test harness |
+| 2026-08-19 | Mild tilt ortho + yaw (Z/C, RMB); front idle; angled on move | User chose option 2; Q/E kept for skills |
+| 2026-08-19 | Inventory size 144 (12×12); pad legacy 20-slot saves | User request; DB check migrated |
+| 2026-08-19 | Login→server→8 slots gate; create always Adventurer; class cards for specialists | User build order; cards carry resist + secondary weapon seeds |
+| 2026-08-19 | Tower shared maps `tower_f*` + `tower_boss_*` instances; gate via `towerClearedFloor` + switches | Avoid dungeon→dungeon portal hide; progression server-validated |
+| 2026-08-19 | Class id migrate wanderer→adventurer, warrior→fighter, archer→marksman | Old saves still boot |
+| 2026-08-19 | Trade/friends/party HUD/guild/settings before commissioned art | User: assets later, everything else first |
+| 2026-08-19 | Any `dungeon_*` portal opens party-shared instance | Soft-code beyond crypt-only |
 | 2026-08-18 | Postgres optional via DATABASE_URL; dual-write file+DB; register/login over WS | File fallback keeps CI/dev without DB; schema applied on boot |
 | 2026-08-18 | Crypt portals create private instances (`mapId#inst`); party shares one | Package Phase 5 without multi-process yet |
 | 2026-08-18 | Procedural SpriteCatalog silhouettes + biome tiles | Replace graybox before commissioned art |

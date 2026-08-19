@@ -1,30 +1,18 @@
-# Feature Slice — Gap analysis build
-
-## Live
-
-| Feature | Status |
-|---------|--------|
-| Town / field / crypt maps | Live |
-| Portals + crypt **instances** | Live |
-| Shops + armor gear | Live |
-| Homestone / quests / neutrals | Live |
-| Char create + class select | Live |
-| Inventory `I`, gear LMB equip | Live |
-| Postgres persist + register/login (`L`) | Live (needs DATABASE_URL) |
-| File save fallback | Live |
-| Procedural sprites / biome tiles | Live |
-| XP / levels on kill | Live |
-
-## Roadmap
-
-1. [x] Indicator-cast
-2. [x] Postgres + login
-3. [x] Party/guild
-4. [x] Playable hub loop
-5. [x] Sprite pass (procedural)
-6. [x] XP / full equip / dungeon instance
-7. [ ] Commissioned art / trade / party HUD
-
-## Skip now
-
-MMO-scale split, auction, friends list, LoS
+# Feature Slice — 2.5D + Inventory UI
+
+## Live
+
+| Feature | Status |
+|---------|--------|
+| Mild tilt ortho camera + yaw (Z/C, RMB) | Live |
+| Billboard art sprites | Live |
+| 4-dir facing on move / just-moved; front idle | Live |
+| Inventory 12×12 (144) movable + char/equip | Live |
+| Esc settings: resolution + logout | Live |
+| Craftpix idle/walk sheets | Live |
+| Login → 8 slots / Tower / Classes | Live |
+
+## Skip now
+
+Full free pitch orbit, Autotiles, NPC skins, multi-class player sprites
+

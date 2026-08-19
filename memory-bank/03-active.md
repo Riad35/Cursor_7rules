@@ -2,21 +2,18 @@
 
 ## Current Focus
 
-**Nostale gap slice shipped:** Postgres+login wiring, procedural sprite pass, XP/levels, full gear slots, crypt dungeon instances. Next candidates: art polish / trade / party HUD / more biomes.
+**Targeting fix + MP×20 test** — reconnect client after server restart.
 
 ## Recent Changes
 
-- `DATABASE_URL` + schema on boot; register/login (`L`); file fallback
-- Biome tiles + silhouette sprites (`SpriteCatalog`)
-- XP on kill, armor/helm/boots/gloves/accessory equip
-- `dungeon_crypt` private instances (party-shared); exit portal
-- Classes: warrior / mage / archer selectable at create
-- Server tests **52/52**; stubs → gatcha1
+- Target lock: RemapSelf from `you.id` only (was stealing map/monster ids); Tab range 999; looser monster kind match
+- MP ×20 via `applyGearStats` (TEST — revert later)
+- Unity cleanup Phase 3 done earlier
 
 ## Blockers
 
-- keine (set `DATABASE_URL` in `gAAAcha/server/.env` to enable Postgres)
+- none
 
 ## Decisions Pending
 
-- none critical
+- Revert MP mult; wipe `_ToReview`; T0/T1 vs Art P2
