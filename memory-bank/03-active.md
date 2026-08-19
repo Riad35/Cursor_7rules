@@ -2,13 +2,14 @@
 
 ## Current Focus
 
-**Targeting fix + MP×20 test** — reconnect client after server restart.
+**Playtest fixes:** white hit-rings + slime_yard density; commit/push.
 
 ## Recent Changes
 
-- Target lock: RemapSelf from `you.id` only (was stealing map/monster ids); Tab range 999; looser monster kind match
-- MP ×20 via `applyGearStats` (TEST — revert later)
-- Unity cleanup Phase 3 done earlier
+- Hit rings were opaque white quads (looked like white squares) — transparent ring, hidden for art sprites
+- slime_yard trimmed to 12 slimes + dummy; proximity aggro no longer seeds every packed unit
+- Pending respawn dedupe + clear monster AI on death
+- Combat step 2 scaffolding still present (memory session store); Redis not required
 
 ## Blockers
 
@@ -16,4 +17,4 @@
 
 ## Decisions Pending
 
-- Revert MP mult; wipe `_ToReview`; T0/T1 vs Art P2
+- Approve → combat step 3 (pure damage resolver)
