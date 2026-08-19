@@ -8,9 +8,9 @@
 - 2.5D camera + facing sprites + 12×12 inventory + Esc settings/logout
 - Camera-basis move/facing fix
 - Combat anims (death/hurt/attack/walk+run attack) + lock outline on sprite (+2px)
-- Test arena: cannon flame, ragdoll OOC heal, portals A↔B, hazard tick ground
+- Test arena → Combat Lab (40×28 zoned) + cast desync fix (soft collision / lastGood range)
 - Esc UI scale via GUI.matrix + resolution prefs apply
-- Server tests **59/59**
+- Server tests **66/66**
 - Project index: `memory-bank/00-index.md`
 
 ## Open

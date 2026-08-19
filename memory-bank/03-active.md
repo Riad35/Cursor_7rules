@@ -2,18 +2,18 @@
 
 ## Current Focus
 
-**Playtest fixes:** white hit-rings + slime_yard density; commit/push.
+**Combat lab playtest:** cast desync fixed; expand `test_arena` verified in-client.
 
 ## Recent Changes
 
-- Hit rings were opaque white quads (looked like white squares) — transparent ring, hidden for art sprites
-- slime_yard trimmed to 12 slimes + dummy; proximity aggro no longer seeds every packed unit
-- Pending respawn dedupe + clear monster AI on death
-- Combat step 2 scaffolding still present (memory session store); Redis not required
+- Cast desync: soft local collision, range from `_lastGood*`, real hit radii, living lock refresh, `out_of_range` retries same skill; server rejects cross-map UNIT targets
+- Stubs synced → Unity `_Project/Scripts`
+- `test_arena` → 40×28 Combat Lab (melee/ranged/dummy/force/chase/hazard/cannon/variety); `slime_yard` empty stub
+- Zone smoke checklist: `docs/ATTACKS.md` → Combat Lab
 
 ## Blockers
 
-- none
+- none (Unity playtest for floats/hurt/counterattack still manual)
 
 ## Decisions Pending
 
